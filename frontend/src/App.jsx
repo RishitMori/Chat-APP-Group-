@@ -33,6 +33,7 @@ const App = () => {
       .get(`${server}/api/v1/user/me`, { withCredentials: true })
       .then(({ data }) => dispatch(userExists(data.user)))
       .catch((err) => dispatch(userNotExists()));
+    console.log("hello")
   }, [dispatch]);
 
   return loader ? (
